@@ -17,4 +17,4 @@ env/
 # Misc
 *.log
 
-ignore
+ignore/
