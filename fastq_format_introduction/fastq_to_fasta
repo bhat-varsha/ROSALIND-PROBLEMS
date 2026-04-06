@@ -1,0 +1,14 @@
+#fastq contain id ,sequence and quality score
+#fasta does not have this
+
+#so now we have fastq file , from that we have to get fasta format
+#so we can only fetch the id and seq from fastq files, 
+#as fasta files have only these two 
+
+from Bio import SeqIO
+#rosalind.tfsq.txt is the input file which i got it from rosalind website, it is in fastq format
+fastq_file = SeqIO.parse("rosalind_tfsq.txt", "fastq")
+
+for fasta in fastq_file:
+    print(">" + fasta.id)
+    print(fasta.seq)
